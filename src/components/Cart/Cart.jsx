@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext.js';
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, cartTotal, cartCount } = useContext(CartContext);
@@ -27,15 +28,13 @@ const Cart = () => {
   return (
     <div className="bg-base-100 min-h-screen py-10">
       <div className="w-11/12 lg:w-9/12 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end md:items-center mb-8 gap-4 border-b border-base-200 pb-6">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-center mb-8 gap-4 border-b border-base-200 pb-6">
           <div>
             <h1 className="text-4xl font-extrabold text-base-content tracking-tight">Shopping Cart</h1>
             <p className="text-base-content/70 mt-2 font-medium">You have {cartCount} items in your cart</p>
           </div>
-          <button onClick={clearCart} className="btn btn-ghost btn-sm text-error hover:bg-error/10 font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-            </svg>
+          <button onClick={clearCart} className="btn btn-ghost btn-base text-error hover:bg-error/10 font-semibold">
+            <RiDeleteBin6Line />
             Clear Cart
           </button>
         </div>
@@ -80,12 +79,10 @@ const Cart = () => {
                     
                     <button 
                       onClick={() => removeFromCart(item.id)}
-                      className="btn btn-square btn-ghost text-error hover:bg-error hover:text-white transition-colors"
+                      className="btn btn-square btn-ghost text-error hover:bg-error hover:text-white transition-colors text-lg"
                       title="Remove item"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                      </svg>
+                      <RiDeleteBin6Line />
                     </button>
                   </div>
                 </div>

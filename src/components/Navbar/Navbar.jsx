@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const cartCount = 0;
+  const cartTotal = 0; 
 
   const navItems = (
     <>
@@ -61,8 +63,8 @@ const Navbar = () => {
             </div>
             <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow-xl border border-base-200">
               <div className="card-body">
-                <span className="font-bold text-lg">0 Items</span>
-                <span className="text-info font-semibold">Subtotal: $0.00</span>
+                <span className="font-bold text-lg">{cartCount} Items</span>
+                <span className="text-info font-semibold">Subtotal: ${cartTotal.toFixed(2)}</span>
                 <div className="card-actions">
                   <Link to="/cart" className="btn btn-primary btn-block shadow-md hover:scale-[1.02] transition-transform">View cart</Link>
                 </div>
