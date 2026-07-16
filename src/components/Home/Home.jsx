@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import heroImage2 from "../../assets/images/Frame 5.png";
 import products from "../../dummyData";
 const Home = () => {
-  const featuredProducts = products.filter((product) => product.featured);
+  const featuredProducts = products.filter((product) => product.featured).slice(0, 4);
   return (
     <div className="bg-base-100 min-h-screen">
       <div>

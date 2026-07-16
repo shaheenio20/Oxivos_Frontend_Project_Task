@@ -10,6 +10,9 @@ import "./index.css";
 import Routes from './Routes/Routes';
 import Home from './components/Home/Home';
 import Product from './components/Product/Product';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+import { CartProvider } from './contexts/CartProvider';
+import Cart from './components/Cart/Cart';
 
 const router = createBrowserRouter([
   {
@@ -24,13 +27,22 @@ const router = createBrowserRouter([
         path: "/products",
         element: <Product></Product>
       },
-      
+      {
+        path: "/products/:id",
+        element: <ProductDetails></ProductDetails>
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>
+      }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
