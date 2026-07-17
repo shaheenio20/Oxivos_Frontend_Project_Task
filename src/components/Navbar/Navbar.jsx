@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">{navItems}</ul>
         </div>
-        <div className="navbar-end gap-4 lg:ml-0 ml-4">
+        <div className="navbar-end gap-4 lg:ml-0 ml-6">
           <div className="form-control mr-3 w-1/2">
             <input
               onChange={handleSearch}
