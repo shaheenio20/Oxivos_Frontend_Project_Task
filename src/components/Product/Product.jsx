@@ -1,8 +1,14 @@
 import { useState } from "react";
 import productData from "../../dummyData";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+//.filter((product) => product.name.toLowerCase().includes(search))
 const Product = () => {
   const [products] = useState(productData);
+  const [searchParams] = useSearchParams();
+  const searchItems = searchParams.get("search") || "";
+  const filterSearchItems = products.filter((product) =>
+    product.name.toLowerCase().includes(searchItems.toLowerCase()),
+  );
   return (
     <div className="bg-base-100 min-h-screen py-10">
       <div className="w-11/12 mx-auto">
@@ -16,28 +22,31 @@ const Product = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <div key={product.id} className="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+          {filterSearchItems.map((product) => (
+            <div
+              key={product.id}
+              className="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <figure className="px-4 pt-4">
                 <img
-                    src={product.image}
-                    alt={product.name}
-                    className="rounded-lg w-full h-64 object-cover"
+                  src={product.image}
+                  alt={product.name}
+                  className="rounded-lg w-full h-64 object-cover"
                 />
-                </figure>
-                <div className="card-body">
-                    <h3 className="card-title text-lg font-semibold">
-                        {product.name}
-                    </h3>
-                    <p className="text-gray-600">${product.price}</p>
-                    <div className="card-actions justify-end">
-                        <Link to={`/products/${product.id}`}>
-                            <button className="btn btn-primary btn-sm">
-                                View Details
-                            </button>
-                        </Link>
-                    </div>
+              </figure>
+              <div className="card-body">
+                <h3 className="card-title text-lg font-semibold">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600">${product.price}</p>
+                <div className="card-actions justify-end">
+                  <Link to={`/products/${product.id}`}>
+                    <button className="btn btn-primary btn-sm">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
+              </div>
             </div>
           ))}
         </div>
