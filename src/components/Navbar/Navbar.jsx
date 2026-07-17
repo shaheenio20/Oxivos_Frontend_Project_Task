@@ -69,7 +69,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link to="/products" className="btn btn-primary shadow-md hidden sm:flex hover:scale-[1.02] transition-transform">Explore Now</Link>
+          <Link to="/products" className="btn btn-primary shadow-md  sm:flex hover:scale-[1.02] transition-transform">See More</Link>
         </div>
       </div>
     </div>

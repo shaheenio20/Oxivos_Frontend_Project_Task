@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     addToCart(product);
     Swal.fire({
-      title: "Added to Cart",
+      title: "Success!",
       text: "The cart has been added successfully.",
       icon: "success",
       confirmButtonText: "OK",
