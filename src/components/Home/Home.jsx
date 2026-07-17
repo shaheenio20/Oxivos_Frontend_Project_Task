@@ -20,7 +20,7 @@ const Home = () => {
           <div className="hero-overlay bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
           <div className="hero-content text-neutral-content flex-col lg:flex-row w-full justify-start pl-8 lg:pl-24 relative z-10">
             <div className="max-w-2xl text-left animate-fade-in-up">
-              <span className="badge badge-primary badge-lg mb-6 font-semibold shadow-lg">
+              <span className="badge badge-primary py-4 badge-lg mb-6 font-semibold shadow-lg">
                 New Arrival 2025
               </span>
               <h1 className="mb-6 text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-11/12 mx-auto mb-20">
-        <div className="w-3/5 mx-auto mb-8 text-center">
+        <div className="lg:w-3/5 w-4/5 mx-auto mb-8 text-center">
           <h2 className="text-3xl font-bold mb-3">
             Featured Products
           </h2>
