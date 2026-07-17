@@ -50,7 +50,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost hover:bg-transparent">
-            <span className="text-xl font-bold ml-2 hidden sm:block tracking-tight">
+            <span className="lg:text-xl text-sm font-bold tracking-tight mr-3">
               Fashion<span className="text-primary">Store</span>
             </span>
           </Link>
@@ -58,14 +58,14 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">{navItems}</ul>
         </div>
-        <div className="navbar-end gap-4">
-          <div className="form-control mr-3">
+        <div className="navbar-end gap-4 lg:ml-0 ml-4">
+          <div className="form-control mr-3 w-1/2">
             <input
               onChange={handleSearch}
               type="text"
               name="search"
               placeholder="Search"
-              className="input input-bordered lg:w-full w-1/2"
+              className="input input-bordered"
             />
           </div>
           <Link

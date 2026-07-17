@@ -53,7 +53,7 @@ const products =  [
   },
   {
     "id": 5,
-    "name": "Traditional Cotton Panjabi",
+    "name": "Professional Dress Together",
     "category": "Panjabi",
     "price": 2490,
     "image": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7",
@@ -92,7 +92,7 @@ const products =  [
   },
   {
     "id": 8,
-    "name": "Classic Polo Shirt",
+    "name": "Classic Polo T-Shirt",
     "category": "Polo",
     "price": 1290,
     "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820",
@@ -108,7 +108,7 @@ const products =  [
     "name": "Cargo Pants",
     "category": "Pants",
     "price": 1990,
-    "image": "https://images.unsplash.com/photo-1514996937319-344454492b37",
+    "image": "https://m.media-amazon.com/images/I/81xRg0piFpL._AC_UY350_.jpg",
     "rating": 4.6,
     "colors": ["Olive", "Black"],
     "sizes": ["30", "32", "34"],

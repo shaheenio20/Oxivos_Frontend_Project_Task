@@ -72,10 +72,10 @@ const ProductDetails = () => {
 
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div>
-                <h3 className="font-semibold text-base-content/70 uppercase text-sm mb-3">
+                <h3 className="font-semibold text-base-content/70 uppercase text-sm mb-3 text-center">
                   Available Colors
                 </h3>
-                <div className="flex gap-2">
+                <div className="lg:flex-row flex-col gap-2 space-x-2 space-y-2 text-center">
                   {product.colors?.map((color, idx) => (
                     <div
                       key={idx}
@@ -88,10 +88,10 @@ const ProductDetails = () => {
               </div>
 
               <div>
-                <h3 className="font-semibold text-base-content/70 uppercase text-sm mb-3">
+                <h3 className="font-semibold text-base-content/70 uppercase text-sm mb-3 text-center">
                   Sizes
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="lg:flex-row flex-col gap-2 space-x-2 space-y-2 text-center">
                   {product.sizes?.map((size, idx) => (
                     <div
                       key={idx}
