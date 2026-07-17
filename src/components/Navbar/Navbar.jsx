@@ -70,7 +70,7 @@ const Navbar = () => {
           </div>
           <Link
             to="/products"
-            className="btn btn-primary shadow-md  sm:flex hover:scale-[1.02] transition-transform mr-3 lg:mr-0"
+            className="btn btn-primary shadow-md  sm:flex hover:scale-[1.02] transition-transform mr-1 lg:mr-0"
           >
             See More
           </Link>
