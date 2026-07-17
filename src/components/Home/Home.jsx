@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import heroImage2 from "../../assets/images/Frame 5.png";
 import products from "../../dummyData";
 const Home = () => {
-  const featuredProducts = products.filter((product) => product.featured).slice(0, 4);
+  const featuredProducts = products
+    .filter((product) => product.featured)
+    .slice(0, 4);
   return (
     <div className="bg-base-100 min-h-screen">
       <div>
@@ -40,9 +42,15 @@ const Home = () => {
         </div>
       </div>
       <div className="w-11/12 mx-auto mb-20">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          Featured Products
-        </h2>
+        <div className="w-3/5 mx-auto mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-3">
+            Featured Products
+          </h2>
+          <p>
+            Explore our featured products, carefully selected to offer the
+            perfect blend of quality, value, and performance.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {featuredProducts.map((product) => (
             <div
