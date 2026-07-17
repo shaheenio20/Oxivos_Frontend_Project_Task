@@ -31,7 +31,7 @@ const Checkout = () => {
   };
   return (
     <div className="bg-base-100 min-h-screen py-10">
-      <div className="hero min-h-screen">
+      <div className="hero min-h-screen pt-8 lg:pt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-11/12 mx-auto">
           <div className="card w-full shrink-0 shadow-2xl">
             <h1 className="lg:text-3xl text-2xl font-bold text-center my-5 text-primary">
@@ -102,7 +102,7 @@ const Checkout = () => {
             <div className="">
               <div className="card bg-base-200/50 border border-base-300 sticky top-24">
                 <div className="card-body p-8">
-                  <h3 className="text-2xl font-bold mb-6 pb-4 border-b border-base-300">
+                  <h3 className="text-2xl font-bold mb-6 pb-4 border-b border-base-300 text-primary">
                     Order Summary
                   </h3>
 

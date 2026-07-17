@@ -6,7 +6,7 @@ const Product = () => {
   return (
     <div className="bg-base-100 min-h-screen py-10">
       <div className="w-11/12 mx-auto">
-        <div className="mb-12 text-center max-w-3xl mx-auto">
+        <div className="mb-12 text-center max-w-3xl mx-auto pt-10 lg:pt-0">
           <h1 className="text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight text-base-content">
             Our <span className="text-primary">Collection</span>
           </h1>

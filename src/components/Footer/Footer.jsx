@@ -2,7 +2,7 @@ import logo from "../../assets/images/fashion-logo.jpg";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-neutral-200">
+      <div className="bg-neutral-100">
         <footer className="footer text-base-content p-10 w-10/12 mx-auto">
           <aside>
             <img src={logo} alt="logo" className="w-16 rounded-full"/>
@@ -16,7 +16,6 @@ const Footer = () => {
             <a className="link link-hover">Branding</a>
             <a className="link link-hover">Design</a>
             <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
           </nav>
           <nav>
             <h6 className="footer-title">Company</h6>
@@ -32,7 +31,7 @@ const Footer = () => {
           </nav>
         </footer>
       </div>
-      <div className="bg-neutral-100">
+      <div className="bg-neutral-50">
         <footer className="footer text-neutral-content items-center p-4 w-10/12 mx-auto">
           <aside className="lg:grid-flow-col items-center">
             <h6 className="text-xl font-bold text-blue-500">OXIVOS</h6>

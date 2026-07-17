@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext.js";
 import productData from "../../dummyData";
+import Swal from "sweetalert2";
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -10,13 +11,19 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     addToCart(product);
+    Swal.fire({
+      title: "Added to Cart",
+      text: "The cart has been added successfully.",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
     navigate("/cart");
   };
 
   return (
     <div className="bg-base-100 min-h-screen py-10">
       <div className="w-11/12 mx-auto">
-        <div className="card lg:card-side bg-base-100 shadow-2xl overflow-hidden rounded-2xl">
+        <div className="card lg:card-side bg-base-100 shadow-2xl overflow-hidden rounded-2xl pt-10 lg:pt-0">
           <figure className="lg:w-1/2 relative bg-base-200">
             <img
               src={product.image}

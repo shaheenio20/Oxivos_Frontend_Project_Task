@@ -55,7 +55,7 @@ const Cart = () => {
     <div className="bg-base-100 min-h-screen py-10">
       <div className="w-11/12 lg:w-9/12 mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center mb-8 gap-4 border-b border-base-200 pb-6">
-          <div>
+          <div className="pt-10 md:pt-0">
             <h1 className="text-4xl font-extrabold text-base-content tracking-tight">
               Shopping Cart
             </h1>
